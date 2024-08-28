@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodue</title>
+    <link rel="manifest" href="/manifest.json" />
+    <!-- icon -->
+    <link
+      rel="shortcut icon"
+      href="images/logo/logo_white.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="loading">
+      <img src="images/logo/logo_dark.png" alt="Logo" class="logo" />
+      <p>Loading...</p>
+    </div>
+
+    <div id="load-data">
+      <!-- skip to content -->
+      <a href="#" class="skip-to-content">Skip to content</a>
+
+      <!-- navbar -->
+      <nav id="navbar" class="navbar fixed-top">
+        <div class="padding-nav">
+          <a href="#Home" class="navbar-logo">
+            <img src="images/logo/logo_white.png" alt="Brand-Logo" />
+            <p>foodue</p>
+          </a>
+
+          <!-- colapse -->
+          <div
+            id="hamburger-icon"
+            class="hamburger-icon"
+            tabindex="0"
+            role="button"
+            aria-label="Toggle Menu"
+          >
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+          <!-- Navbar right -->
+          <div class="navbar-right-prop" id="navbar-right-prop">
+            <ul class="navbar-nav">
+              <li>
+                <a class="nav-line" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-line" href="favorit.html">Favorite</a>
+              </li>
+              <li>
+                <a class="nav-line" href="#main-content">Restaurant</a>
+              </li>
+              <li>
+                <a
+                  class="nav-line"
+                  href="https://www.linkedin.com/in/rohmadhidayat/"
+                  target="_blank"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a class="nav-line" href="#Contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- header / hero elemen-->
+      <header id="Home" class="paralaxx" tabindex="-1">
+        <div class="header-overlay"></div>
+
+        <div class="header-cont">
+          <div class="header-prop">
+            <h1>
+              Maximize your taste <br />
+              Minimize your costs
+            </h1>
+            <p>Your Taste Guide to Heaven</p>
+            <button class="btn-explore">
+              <a href="#About"> Explore Foodue </a>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- daftar restoran -->
+      <main tabindex="-1">
+        <div
+          id="main-content"
+          class="daftar-restoran-prop"
+          aria-label="Favorite Restaurants"
+        >
+          <h1>Our Favorite Restaurant List</h1>
+          <div id="daftar-restoran" class="daftar-restoran">
+            <!-- restoran list -->
+          </div>
+        </div>
+      </main>
+
+      <!-- tentang foodue -->
+      <section
+        class="body-prop"
+        id="About"
+        tabindex="-1"
+        aria-label="About Foodue"
+      >
+        <div class="container-body">
+          <h1>About Us</h1>
+          <p>Providing Convenience in Finding Restaurants</p>
+          <div class="container-body-item">
+            <!-- artikel 1 -->
+            <div class="body-item-1">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+                dolor impedit ea eveniet, ullam veritatis soluta sapiente quas
+                et distinctio temporibus nostrum inventore? Cum, quasi. Rem
+                accusantium quia exercitationem quasi hic similique culpa
+                expedita recusandae nemo, id quos nesciunt, saepe odit vel,
+                tenetur numquam dicta inventore ullam sapiente eaque vero?
+              </p>
+              <img
+                src="images/heros/hero-image_4.jpg"
+                alt="Body Image 1"
+                class="img-body"
+              />
+            </div>
+
+            <!-- artikel 2 -->
+            <div class="body-item-2">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis autem, illo optio labore ea quos iure amet fugit vel
+                magnam voluptatibus cupiditate, quod necessitatibus ipsa tempore
+                vero illum consectetur facilis asperiores magni nam placeat?
+                Odio reprehenderit vero officia saepe qui dignissimos natus
+                minima, doloremque officiis, dolorem consequatur facilis aperiam
+                recusandae nostrum eaque nobis quo molestias.
+              </p>
+              <img
+                src="images/heros/hero-image_1.jpg"
+                alt="Body Image 2"
+                class="img-body"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <section class="section-footer-cont" id="Contact" tabindex="-1">
+        <div class="container-footer">
+          <div class="row-footer">
+            <!-- logo -->
+            <div class="section-footer">
+              <img
+                src="images/logo/logo_white.png"
+                alt="Logo Footer"
+                width="200"
+              />
+            </div>
+
+            <!-- col 2 -->
+            <div class="section-footer-2">
+              <h1>Foodue</h1>
+              <p>
+                We Make The Best Experience <br />
+                for Your Taste
+              </p>
+            </div>
+
+            <!-- col 3 -->
+            <div class="section-footer">
+              <h1>Contact Us</h1>
+              <p>Phone Number: +45 1234 1234 12</p>
+              <p>Email: foodue@restaurant.id</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- copyright -->
+      <footer tabindex="-1">
+        <div class="container-copy-prop">
+          <p>
+            For Submission Dicoding © Foodue Apps 2024. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

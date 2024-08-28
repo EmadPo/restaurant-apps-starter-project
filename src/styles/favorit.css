@@ -1,0 +1,8 @@
+.daftar-restoran-favorit {
+  padding: 3vh 10vh 10vh 10vh;
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+  flex-wrap: wrap;
+  justify-content: center;
+}

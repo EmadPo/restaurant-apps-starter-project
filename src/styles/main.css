@@ -1,0 +1,666 @@
+/*////// Global Variabel //////*/
+#load-data {
+  display: none;
+}
+.loading p {
+  color: #131416;
+}
+body {
+  font-family: 'Roboto', sans-serif !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ee8f00;
+  scroll-behavior: smooth;
+}
+img {
+  pointer-events: none;
+  cursor: none;
+}
+a,
+a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer !important;
+}
+
+/* global btn custom */
+.btn {
+  transition: 0.8s ease;
+}
+.btn-custom {
+  margin: 1vh;
+  background-color: #ee8f00;
+  border-radius: 20px;
+  border-color: transparent;
+  padding: 2vh 3vh 2vh 3vh;
+  color: #ffffff !important;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+}
+.btn-custom:hover {
+  color: #fefefe !important;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.5s ease;
+  z-index: 100;
+}
+.navbar.scrolled {
+  background-color: #ee8f00;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 20px, rgba(0, 0, 0, 0.1) 0px 15px 12px;
+}
+.padding-nav {
+  padding: 3vh 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo {
+  display: flex;
+}
+.navbar-logo img {
+  width: 10vh;
+  height: auto;
+}
+.navbar-logo p {
+  font-family: 'Lemon/Milk';
+  padding-left: 2vh;
+  font-size: 3vh;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.navbar-right-prop {
+  padding: 1vh 3vh;
+  font-size: 2vh5;
+  color: #f5f7f8;
+  font-weight: 500;
+}
+.navbar-right-prop ul {
+  display: flex;
+  list-style: none;
+  font-size: 2.6vh;
+}
+.navbar-right-prop li {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+}
+.nav-line {
+  padding: 3vh 3vh;
+  min-width: 44px;
+  min-height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+.nav-line::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 1.5vh;
+  left: 0;
+  background-color: #fefefe;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.nav-line:hover::before {
+  transform: scaleX(1);
+}
+
+/* header / hero elemen */
+.paralaxx {
+  max-width: 100%;
+  position: relative;
+  padding: 15vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-image: url(../public/images/heros/hero-image_2.jpg);
+  height: 110vh;
+  z-index: 1;
+}
+.header-prop {
+  padding: 25vh;
+  position: relative;
+  z-index: 1;
+}
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, transparent);
+}
+header h1,
+p {
+  color: #ffffff;
+}
+.btn-explore {
+  min-width: 44px;
+  min-height: 44px;
+  background-color: #ee8f00;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: 'Lemon/Milk';
+  font-size: 2vh;
+  letter-spacing: 0.1vh;
+  border-color: transparent;
+  padding: 1vh 3vh;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: 0.3s ease;
+}
+.btn-explore a {
+  padding: 1.5vh 2vh;
+}
+.btn-explore:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* daftar restoran */
+.daftar-restoran-prop {
+  background-color: #fbf6ee;
+  border-radius: 15vh;
+  position: relative;
+  top: -40vh;
+  z-index: 2;
+}
+.daftar-restoran-prop .daftar-restoran {
+  height: 100%;
+}
+.daftar-restoran-prop h1 {
+  display: flex;
+  justify-content: center;
+  padding: 5vh;
+  font-size: 6vh;
+}
+.daftar-restoran {
+  padding: 3vh 10vh 10vh 10vh;
+  display: flex;
+  flex-direction: row;
+  gap: 5vh;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 50vh;
+  background-color: #fefefe;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 15px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+.card-body {
+  padding: 3vh;
+}
+.card-title {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.card-text {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #0c0d0e;
+}
+.btn-detail {
+  padding: 3.5vh 3vh;
+  margin-top: auto;
+  bottom: 0;
+}
+
+/* body */
+.body-prop {
+  margin-top: -40vh;
+  position: relative;
+  height: 100%;
+  background-color: #ee8f00;
+  line-height: 1.6;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.container-body {
+  padding: 10vh 10vh;
+}
+.container-body h1 {
+  margin: 0;
+  font-size: 5vh;
+  text-shadow: 0px 6px 11px rgba(0, 0, 0, 0.2);
+}
+.container-body p {
+  margin: 0;
+  font-size: 3vh;
+  padding: 0 auto;
+}
+.container-body-item {
+  padding: 5vh 15vh;
+}
+.body-item-1 {
+  display: flex;
+  align-items: center;
+}
+.body-item-1 p {
+  font-size: 2.8vh;
+  text-align: start;
+  padding: 0 5vh 0 0;
+}
+.body-item-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.body-item-2 p {
+  font-size: 2.8vh;
+  text-align: end;
+  padding: 0 0 0 5vh;
+}
+.img-body {
+  max-width: 40%;
+  border-radius: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 10px, rgba(0, 0, 0, 0.1) 0px 6px 5px;
+}
+
+.body-img-prop {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px 0px;
+}
+
+/* footer */
+.section-footer-cont {
+  background-color: #0c0d0e;
+  color: #fefefe;
+}
+.container-footer {
+  padding: 5vh 0;
+}
+.row-footer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  color: #ffffff;
+  justify-content: center;
+}
+.section-footer {
+  display: flex;
+  padding: 0 5vh;
+  flex-direction: column;
+  align-items: start;
+}
+.section-footer-2 {
+  display: flex;
+  padding: 0 5vh;
+  flex-direction: column;
+  align-items: start;
+}
+.section-footer-2 p {
+  font-size: 2.5vh;
+  margin: 0;
+}
+.section-footer p {
+  text-align: justify;
+  font-size: 2.5vh;
+  margin: 0;
+}
+
+/* copyright */
+footer {
+  background-color: #131416;
+  display: flex;
+  justify-content: center;
+}
+.container-copy-prop {
+  background-color: #131416;
+  text-align: center;
+  height: 100%;
+  padding: 1vh;
+}
+.container-copy-prop p {
+  font-size: 2.5vh;
+}
+
+/* responsive */
+/* ponsel */
+@media (max-width: 767px) {
+  .header-cont {
+    width: 100%;
+  }
+  .header-prop {
+    padding: 25vh 10vh;
+  }
+  .daftar-restoran-prop h1 {
+    padding-top: 10vh;
+  }
+  .card {
+    max-width: 80vh;
+  }
+  .container-body-item {
+    padding: 5vh 15vh 2vh 15vh;
+  }
+  .body-item-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-item-1 p {
+    text-align: justify;
+    padding: 0;
+  }
+  .body-item-2 {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-item-2 p {
+    padding: 0;
+    text-align: justify;
+  }
+  .section-footer {
+    justify-content: center;
+  }
+  .section-footer img {
+    max-width: 20vh;
+    height: auto;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar-logo img {
+    width: 100%;
+    height: 10vh;
+  }
+  .padding-nav {
+    padding: 3vh 8vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-cont {
+    width: 100%;
+  }
+  .header-prop {
+    padding: 25vh 5vh;
+  }
+  header h1 {
+    font-size: 6vh;
+  }
+  header p {
+    font-size: 3.5vh;
+  }
+  .btn-explore {
+    font-size: 3vh;
+    border-radius: 30px;
+    letter-spacing: 0.4vh;
+  }
+  .daftar-restoran {
+    justify-content: flex-start;
+  }
+  .daftar-restoran-prop h1 {
+    padding-top: 10vh;
+  }
+  .card {
+    max-width: 30vh;
+  }
+  .container-body h1 {
+    font-size: 4vh;
+  }
+  .container-body-item {
+    padding: 5vh 15vh 2vh 15vh;
+  }
+  .body-item-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-item-1 p {
+    text-align: justify;
+    padding: 0;
+  }
+  .body-item-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-item-2 p {
+    padding: 0;
+    text-align: justify;
+  }
+  .section-footer {
+    justify-content: center;
+  }
+  .section-footer img {
+    max-width: 20vh;
+    height: auto;
+  }
+}
+
+/* desktop */
+@media (max-width: 1080px) {
+  .navbar-logo img {
+    width: 100%;
+    height: 10vh;
+  }
+  .padding-nav {
+    padding: 3vh 8vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-cont {
+    width: 100%;
+  }
+  .header-prop {
+    padding: 25vh 5vh;
+  }
+  header h1 {
+    font-size: 6vh;
+  }
+  header p {
+    font-size: 3.5vh;
+  }
+  .btn-explore {
+    font-size: 3vh;
+    border-radius: 30px;
+    letter-spacing: 0.4vh;
+  }
+  .daftar-restoran {
+    justify-content: center;
+    padding: 3vh 1vh 10vh 1vh;
+  }
+  .daftar-restoran-prop h1 {
+    padding-top: 10vh;
+  }
+  .card {
+    max-width: 40vh;
+  }
+  .container-body h1 {
+    font-size: 4vh;
+  }
+  .container-body-item {
+    padding: 5vh 2vh 5vh 2vh;
+  }
+  .body-item-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-item-1 p {
+    text-align: justify;
+    padding: 0;
+  }
+  .body-item-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .body-item-2 p {
+    padding: 0;
+    text-align: justify;
+  }
+  .img-body {
+    margin: 3vh 0vh;
+    max-width: 100%;
+  }
+  .section-footer {
+    justify-content: center;
+  }
+  .section-footer img {
+    max-width: 20vh;
+    height: auto;
+  }
+}
+
+/* navbar */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 10vh;
+  transition: 0.4s ease;
+}
+
+/* hamburger display */
+@media (max-width: 1023px) {
+  .hamburger-icon {
+    display: block;
+  }
+  .bar {
+    height: 0.6vh;
+    width: 5vh;
+    margin: 0.6vh;
+  }
+  .navbar-right-prop {
+    justify-content: center;
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #ee8f00;
+    z-index: 99;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translate(-250px, 0);
+  }
+  .navbar-right-prop.open {
+    display: flex;
+    transform: translate(0, 0);
+  }
+  .navbar-right-prop ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-right-prop li {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  header h1 {
+    font-size: 4vh;
+  }
+  header p {
+    font-size: 2.8vh;
+  }
+  .padding-nav {
+    padding: 3vh 3vh;
+  }
+  .paralaxx {
+    padding: 5vh 1vh 25vh 1vh;
+  }
+  .btn-explore {
+    font-size: 2vh;
+    border-radius: 30px;
+    letter-spacing: 0.2vh;
+  }
+  .btn-explore a {
+    padding: 1vh;
+  }
+  .daftar-restoran-prop {
+    border-radius: 5vh;
+  }
+  .card {
+    max-width: 50vh;
+  }
+  .daftar-restoran {
+    padding: 0 5vh 10vh 5vh;
+  }
+  .container-body-item {
+    padding: 3vh 1vh 3vh 1vh;
+  }
+  .section-footer p {
+    font-size: 2vh;
+  }
+  .section-footer-2 p {
+    font-size: 2vh;
+  }
+  .container-body {
+    padding: 5vh 5vh;
+  }
+  .img-body {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1vh;
+  }
+  .row-footer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+  .container-copy-prop p {
+    font-size: 2vh;
+    padding: 0 4vh;
+  }
+}
+
+/* skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  z-index: 100;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  color: #ffffff;
+  top: 0;
+}

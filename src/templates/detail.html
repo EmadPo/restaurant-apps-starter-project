@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodue</title>
+    <link rel="manifest" href="/manifest.json" />
+    <!-- icon -->
+    <link
+      rel="shortcut icon"
+      href="images/logo/logo_white.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="loading">
+      <img src="images/logo/logo_dark.png" alt="Logo" class="logo" />
+      <p>Loading...</p>
+    </div>
+
+    <div id="load-data" class="body-detail">
+      <!-- navbar -->
+      <nav id="navbar" class="navbar fixed-top">
+        <div class="padding-nav">
+          <a href="index.html" class="navbar-logo">
+            <img src="images/logo/logo_white.png" alt="Brand-Logo" />
+            <p>foodue</p>
+          </a>
+
+          <!-- colapse -->
+          <div
+            class="hamburger-icon"
+            tabindex="0"
+            role="button"
+            aria-label="Toggle Menu"
+          >
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+
+          <!-- Navbar right -->
+          <div class="navbar-right-prop">
+            <ul class="navbar-nav">
+              <li>
+                <a class="nav-line" href="index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-line" href="favorit.html">Favorite</a>
+              </li>
+              <li>
+                <a
+                  class="nav-line"
+                  href="https://www.linkedin.com/in/rohmadhidayat/"
+                  target="_blank"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- header / hero elemen-->
+      <header id="Home" class="paralaxx-detail" tabindex="-1">
+        <div class="header-overlay-detail"></div>
+
+        <div class="header-cont">
+          <div class="header-prop-detail">
+            <h1>Detail Restaurant</h1>
+            <h2 id="restaurant-title"></h2>
+          </div>
+        </div>
+      </header>
+
+      <!-- main content -->
+      <main id="main-content">
+        <button id="favorite-button" class="btn btn-custom">
+          Add to Favorit
+        </button>
+        <button id="remove-favorite-button" class="btn btn-custom">
+          Delete from Favorit
+        </button>
+        <div id="detail-restoran-detail">
+          <!-- Detail restoran akan dimuat di sini -->
+        </div>
+      </main>
+
+      <!-- copyright -->
+      <footer tabindex="-1">
+        <div class="container-copy-prop">
+          <p>
+            For Submission Dicoding © Foodue Apps 2024. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
